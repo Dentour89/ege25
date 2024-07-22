@@ -1,0 +1,11 @@
+a = 3219876530
+s = sum(list(map(int, str(a))))
+c = 0
+for x in range (a+200_000,10**10):
+  if c >= 5:
+  break
+  if sum(list(map(int, str(x)))) == s:
+    b = str(x)
+    if b == b[::-1]:
+      print(x)
+      c+=1
