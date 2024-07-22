@@ -1,0 +1,10 @@
+from fnmatch import *
+for x in range (999,10**10,999):
+  s = str(x)
+  summ = 0
+  for y in s:
+    summ += int(y)
+  if fnmatch(s,"18*66?90*?"):
+    if s.count("2") == 0:
+      if summ % 3 == 0:
+        print(x,s.count("1"))
