@@ -1,0 +1,25 @@
+from fnmatch import *
+q2 = q4 = q6 = q8 = q0 = 0
+c2 = c4 = c6 = c8 = c0 = 0
+for x in range (656,10**10,656):
+  if fnmatch(str(x),"*84?16?90*?"):
+    if x%10 == 2:
+      c2 +=1
+      q2 = max(q2,x)
+    if x%10 == 4:
+      c4 +=1
+      q4 = max(q4,x)
+    if x%10 == 6:
+      c6 +=1
+      q6 = max(q6,x)
+    if x%10 == 8:
+      c8 +=1
+      q8 = max(q8,x)
+    if x%10 == 0:
+      c0 +=1
+      q0 = max(q0,x)
+print(q0,c0)
+print(q2,c2)
+print(q4,c4)
+print(q6,c6)
+print(q8,c8)
