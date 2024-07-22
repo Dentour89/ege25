@@ -1,0 +1,15 @@
+from fnmatch import *
+summ = 0
+for x in range (1807,10**10,1807):
+  s = str(x)
+  if fnmatch(s,"99*23?*11??"):
+    ch = 0
+    nch = 0
+    for i in s:
+      if int(i)%2 ==0:
+        ch +=1
+      else:
+        nch +=1
+    if ch == nch:
+      summ += x
+print(summ)
